@@ -13,7 +13,7 @@ const messages = [
   "I hope your special day is filled with happiness, even across the miles.",
   "Dreaming of the moment we finally meet face-to-face 🤍",
   "Until then, please accept this virtual embrace filled with all my love 🤗",
-  "Happy Birthday again, my amazing game partner and more 🌟"
+  "Happy Birthday again, my amazing game partner and more 🌟 - Loki"
 ];
 
 let index = 0;
