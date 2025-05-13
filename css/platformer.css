@@ -11,7 +11,11 @@ canvas {
     background: linear-gradient(#c2a7ff, #fff0f5);
     box-shadow: 0 0 20px #7751a1;
     border-radius: 20px;
+    width: 90vw;
+    height: auto;
+    max-width: 800px;
 }
+
 
 
 .platformer-controls {
