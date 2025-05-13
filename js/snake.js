@@ -98,5 +98,5 @@ startBtn.addEventListener("click", () => {
   canvas.style.display = "block";
   document.addEventListener("keydown", changeDirection);
   spawnFood();
-  game = setInterval(draw, 150);
+  game = setInterval(draw, 180); // or 200 if you want it easier
 });
