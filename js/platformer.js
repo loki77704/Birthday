@@ -1,6 +1,13 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
+let screenWidth = Math.min(window.innerWidth, 800);
+let screenHeight = Math.min(window.innerHeight * 0.6, 400);
+
+canvas.width = screenWidth;
+canvas.height = screenHeight;
+
+
 const jumpSfx = document.getElementById("jump-sfx");
 const heartSfx = document.getElementById("heart-sfx");
 const winSfx = document.getElementById("win-sfx");
