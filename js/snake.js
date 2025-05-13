@@ -76,6 +76,14 @@ function changeDirection(e) {
   if (e.key === "ArrowDown" && direction !== "UP") direction = "DOWN";
 }
 
+function setDirection(newDir) {
+  if (newDir === "LEFT" && direction !== "RIGHT") direction = "LEFT";
+  if (newDir === "RIGHT" && direction !== "LEFT") direction = "RIGHT";
+  if (newDir === "UP" && direction !== "DOWN") direction = "UP";
+  if (newDir === "DOWN" && direction !== "UP") direction = "DOWN";
+}
+
+
 function lightUpScreen() {
   document.body.style.transition = "background 2s";
   document.body.style.background = "radial-gradient(circle, #7751a1, #000)";
