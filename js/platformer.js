@@ -124,4 +124,22 @@ function gameLoop() {
 document.addEventListener("keydown", (e) => keys[e.code] = true);
 document.addEventListener("keyup", (e) => keys[e.code] = false);
 
+function moveLeft() {
+  keys["ArrowLeft"] = true;
+  setTimeout(() => keys["ArrowLeft"] = false, 200);
+}
+
+function moveRight() {
+  keys["ArrowRight"] = true;
+  setTimeout(() => keys["ArrowRight"] = false, 200);
+}
+
+function jump() {
+  if (player.onGround) {
+    player.vy = -10;
+    jumpSfx.play();
+  }
+}
+
+
 gameLoop();
