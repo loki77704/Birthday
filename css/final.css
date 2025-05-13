@@ -119,6 +119,7 @@ html {
 
 .message-box {
     font-size: 24px;
+    font-weight: bolder;
     color: #5e2673;
     min-height: 50px;
     padding: 10px 20px;
@@ -224,6 +225,7 @@ html {
 
     .message-box {
         font-size: 20px;
+        font-weight: bolder;
         padding: 8px 16px;
     }
 
@@ -286,6 +288,7 @@ html {
 
     .message-box {
         font-size: 18px;
+        font-weight: bolder;
         padding: 5px;
     }
 
@@ -348,6 +351,7 @@ html {
 
     .message-box {
         font-size: 16px;
+        font-weight: bolder;
     }
 
     .photo-frame img {
