@@ -12,6 +12,15 @@
   </div>
 
   <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <div class="dpad">
+  <button class="arrow up" onclick="setDirection('UP')">↑</button>
+  <div>
+    <button class="arrow left" onclick="setDirection('LEFT')">←</button>
+    <button class="arrow right" onclick="setDirection('RIGHT')">→</button>
+  </div>
+  <button class="arrow down" onclick="setDirection('DOWN')">↓</button>
+</div>
+
 
   <audio id="success-sfx" src="assets/audio/win.mp3"></audio>
   <script src="js/snake.js"></script>
