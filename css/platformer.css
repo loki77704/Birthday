@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #dcd1ff;
+    font-family: sans-serif;
+}
+
+canvas {
+    display: block;
+    margin: auto;
+    background: linear-gradient(#c2a7ff, #fff0f5);
+    box-shadow: 0 0 20px #7751a1;
+    border-radius: 20px;
+}

@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #start-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background: purple;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  canvas {
+    display: none;
+    background-color: #111;
+  }
+  

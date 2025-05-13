@@ -1,0 +1,362 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #d8c4f0, #fff0f5);
+    font-family: 'Courier New', monospace;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    margin-bottom: 40px;
+    background-color: #ffffff; /* Added background color */
+    border-radius: 8px;      /* Added border-radius */
+    box-shadow: 0 20px 45px rgba(120, 76, 10, 0.25); /* Added box-shadow */
+}
+
+.cake {
+    width: 200px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.bottom-layer,
+.middle-layer,
+.top-layer {
+    height: 40px;
+    width: 120px;
+    position: relative;
+    margin: auto;
+    background-repeat: repeat;
+    background-size: 100% 100%, 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(
+            transparent 50px,
+            #e3a953 50px,
+            #e3a953 60px,
+            transparent 60px
+        ),
+        radial-gradient(circle at 30px 5px, #713e16 30px, #eac284 31px);
+}
+
+.middle-layer {
+    transform: scale(0.85);
+    top: 72px;
+    animation: rise-1 2s forwards;
+}
+
+@keyframes rise-1 {
+    100% {
+        top: 7px;
+    }
+}
+
+.top-layer {
+    transform: scale(0.7);
+    top: 144px;
+    animation: rise-2 2s 2s forwards;
+}
+
+@keyframes rise-2 {
+    100% {
+        top: 26px;
+    }
+}
+
+.candle {
+    background: repeating-linear-gradient(
+        45deg,
+        #fd3018 0,
+        #fd3018 5px,
+        #ffa89e 5px,
+        #ffa89e 10px
+    );
+    height: 45px;
+    width: 15px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: rise-3 1s 4s forwards;
+}
+
+@keyframes rise-3 {
+    100% {
+        bottom: 88px;
+    }
+}
+
+.candle:after {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #ffee54;
+    border-radius: 0 50% 50% 50%;
+    transform: scale(0) rotate(45deg);
+    bottom: 50px;
+    left: -0.5px;
+    animation: flame 1.5s 5s forwards;
+}
+
+@keyframes flame {
+    100% {
+        transform: scale(1) rotate(45deg);
+    }
+}
+
+.message-box {
+    font-size: 24px;
+    color: #5e2673;
+    min-height: 50px;
+    padding: 10px 20px;
+    animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.photo-frame img {
+    margin-top: 20px;
+    width: 120px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #8e44ad;
+}
+
+.replay-button {
+    margin-top: 40px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #a86adf;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.replay-button:hover {
+    background-color: #7e4cb5;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 180px;
+        height: 180px;
+        top: 25%; /* Adjusted top position */
+    }
+
+    .cake {
+        width: 100%;
+        bottom: 25px; /* Adjusted bottom position */
+    }
+
+    .bottom-layer,
+    .middle-layer,
+    .top-layer {
+        height: 35px;
+        width: 110px;
+    }
+
+    .middle-layer {
+        transform: scale(0.8);
+        top: 62px;
+    }
+
+    @keyframes rise-1 {
+        100% {
+            top: 5px;
+        }
+    }
+
+    .top-layer {
+        transform: scale(0.65);
+        top: 124px;
+    }
+
+    @keyframes rise-2 {
+        100% {
+            top: 22px;
+        }
+    }
+
+    .candle {
+        height: 40px;
+        width: 12px;
+    }
+
+    @keyframes rise-3 {
+        100% {
+            bottom: 79px;
+        }
+    }
+
+    .message-box {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+
+    .photo-frame img {
+        width: 110px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 140px;
+        height: 140px;
+        top: 20%;
+    }
+
+    .cake {
+        width: 100%;
+        bottom: 20px;
+    }
+
+    .bottom-layer,
+    .middle-layer,
+    .top-layer {
+        height: 30px;
+        width: 98px;
+    }
+
+    .middle-layer {
+        transform: scale(0.75);
+        top: 52px;
+    }
+
+    @keyframes rise-1 {
+        100% {
+            top: 4px;
+        }
+    }
+
+    .top-layer {
+        transform: scale(0.6);
+        top: 104px;
+    }
+
+    @keyframes rise-2 {
+        100% {
+            top: 18px;
+        }
+    }
+
+    .candle {
+        height: 35px;
+        width: 10px;
+    }
+
+    @keyframes rise-3 {
+        100% {
+            bottom: 63px;
+        }
+    }
+
+    .message-box {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .photo-frame img {
+        width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100px;
+        height: 100px;
+        top: 15%;
+    }
+
+    .cake {
+        width: 100%;
+        bottom: 15px;
+    }
+
+    .bottom-layer,
+    .middle-layer,
+    .top-layer {
+        height: 25px;
+        width: 70px;
+    }
+
+    .middle-layer {
+        transform: scale(0.7);
+        top: 40px;
+    }
+
+    @keyframes rise-1 {
+        100% {
+            top: 3px;
+        }
+    }
+
+    .top-layer {
+        transform: scale(0.55);
+        top: 80px;
+    }
+
+    @keyframes rise-2 {
+        100% {
+            top: 14px;
+        }
+    }
+
+    .candle {
+        height: 25px;
+        width: 8px;
+    }
+
+    @keyframes rise-3 {
+        100% {
+            bottom: 45px;
+        }
+    }
+
+    .message-box {
+        font-size: 16px;
+    }
+
+    .photo-frame img {
+        width: 70px;
+    }
+
+    .replay-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-top: 30px;
+    }
+}
