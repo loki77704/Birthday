@@ -11,7 +11,11 @@ let food = { x: 0, y: 0 };
 let score = 0;
 
 const box = 20;
-const canvasSize = 400;
+let screenSize = Math.min(window.innerWidth, window.innerHeight) * 0.9;
+let canvasSize = Math.floor(screenSize / 20) * 20; // keep divisible by 20
+canvas.width = canvasSize;
+canvas.height = canvasSize;
+
 const targetScore = 50;
 
 function draw() {
