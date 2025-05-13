@@ -32,10 +32,17 @@ body {
     border-radius: 10px;
   }
   
-  canvas {
-    display: none;
-    background-color: #111;
-  }
+canvas {
+  display: none;
+  background-color: #111;
+  max-width: 90vw;
+  max-height: 90vw;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  border-radius: 8px;
+}
+
 
 .dpad {
   display: flex;
