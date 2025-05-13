@@ -36,4 +36,39 @@ body {
     display: none;
     background-color: #111;
   }
-  
+
+.dpad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.dpad div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.arrow {
+  background: #8248b3;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.arrow:active {
+  background: #5d2f8e;
+}
+
+@media (min-width: 600px) {
+  .dpad {
+    display: none; /* Hide on desktop */
+  }
+}
